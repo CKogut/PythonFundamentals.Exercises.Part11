@@ -1,9 +1,5 @@
 import unittest
-from unittest import TestCase
-
-import gradebook
-from gradebook import AliveStatus, Person
-from enum import Enum
+from gradebook import AliveStatus, Person, Instructor
 
 
 class GradebookTest(unittest.TestCase):
@@ -36,4 +32,9 @@ class GradebookTest(unittest.TestCase):
         expected_dob = "12311990"
         self._homer.update_dob(expected_dob)
         self.assertEqual(expected_dob, self._homer.dob)
+
+    def test_update_alive(self):
+        expected_alive_status = AliveStatus.DECEASED
+        self._homer.update_alive_status(expected_alive_status)
+        self.assertEqual(expected_alive_status, self._homer.alive)
 
