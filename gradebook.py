@@ -44,10 +44,12 @@ class Student(Person):
 
 
 class ZipCodeStudent(Student):
-    pass
+    pass  # no additional requirements were noted in the README for this class
+
 
 class CollegeStudent(Student):
-    pass
+    pass  # no additional requirements were noted in the README for this class
+
 
 class Classroom:
     def __init__(self):
