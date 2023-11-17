@@ -16,7 +16,9 @@ class Classroom:
         del self.instructors_dict[key]
 
     def print_instructor(self):
-        print(self.instructors_dict)
+        for key in self.instructors_dict:
+            print(f'Key         : {key}')
+            print(self.instructors_dict[key])
 
     def add_student(self, std: Student):
         key = len(self.students_dict) + 1
@@ -44,7 +46,7 @@ if __name__ == "__main__":
 
     print(len(class1.instructors_dict))
 
-    class1.remove_instructor(2)
+    #class1.remove_instructor(2)
 
     print(len(class1.instructors_dict))
 

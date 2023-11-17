@@ -14,6 +14,14 @@ class Person:
         self.dob = dob
         self.alive = alive
 
+    def __str__(self):
+        details = ''
+        details += f'First name  : {self.first_name}\n'
+        details += f'Last name   : {self.last_name}\n'
+        details += f'DOB         : {self.dob}\n'
+        details += f'Status      : {self.alive}\n'
+        return details
+
     def update_first_name(self, name: str):
         self.first_name = name
 
@@ -34,6 +42,15 @@ class Instructor(Person):
         pid = uuid.uuid4()
         self.instructor_id = 'instructor_' + str(pid)
 
+    def __str__(self):
+        details = ''
+        details += f'First name  : {self.first_name}\n'
+        details += f'Last name   : {self.last_name}\n'
+        details += f'DOB         : {self.dob}\n'
+        details += f'ID          : {self.instructor_id}\n'
+        details += f'Status      : {self.alive}\n'
+        return details
+
 
 class Student(Person):
     def __init__(self, first_name: str, last_name: str, dob: str, alive: AliveStatus):
@@ -49,6 +66,5 @@ class ZipCodeStudent(Student):
 
 class CollegeStudent(Student):
     pass  # no additional requirements were noted in the README for this class
-
 
 
