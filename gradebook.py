@@ -31,16 +31,16 @@ class Instructor(Person):
     def __init__(self, first_name: str, last_name: str, dob: str, alive: AliveStatus):
         super().__init__(first_name, last_name, dob, alive)
 
-        inst_id = uuid.uuid4()
-        self.instructor_id = 'instructor_' + str(inst_id)
+        pid = uuid.uuid4()
+        self.instructor_id = 'instructor_' + str(pid)
 
 
 class Student(Person):
     def __init__(self, first_name: str, last_name: str, dob: str, alive: AliveStatus):
         super().__init__(first_name, last_name, dob, alive)
 
-        st_id = uuid.uuid4()
-        self.student_id = 'student_' + str(st_id)
+        pid = uuid.uuid4()
+        self.student_id = 'student_' + str(pid)
 
 
 class ZipCodeStudent(Student):
@@ -51,7 +51,4 @@ class CollegeStudent(Student):
     pass  # no additional requirements were noted in the README for this class
 
 
-class Classroom:
-    def __init__(self):
-        self.students = ()
-        self.instructors = ()
+
